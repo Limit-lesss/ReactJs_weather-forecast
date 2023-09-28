@@ -10,7 +10,7 @@ export const Card = () => {
     },[])
     return(
         <div>
-            <Input_box/>
+            <Input_box onKeyDown={weather.fetchData}/>
             <ButtonBox type="Search" onClick={weather.fetchData}/>
             <h3>Temp: {weather.data?.main?.temp}<sup>o</sup>C</h3>
             <h3>Location: {weather.data?.name},{weather.data?.sys?.country}</h3>
